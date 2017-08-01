@@ -55,6 +55,10 @@ w00t:
 	li $v0, 1
 	syscall
 
+	la	$a0, meme_end
+	li	$v0, 4
+	syscall
+
 	la	$a0, new_meme
 	li	$v0, 4
 	syscall
@@ -111,7 +115,8 @@ rekt:
 
 	.data
 meme_in:		.asciiz "Run progr4m run! MAUAHAHAHA..."
-meme_out: 		.asciiz "Nice Meme: MCA-"
+meme_out:		.asciiz "Nice Meme: MCA{"
+meme_end:		.asciiz "}"
 meme_num:		.word 200
 leet_meme:	.word 13371337
 new_meme:		.asciiz "\n"

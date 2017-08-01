@@ -14,4 +14,8 @@ In this challenge competitors are expected to read through the source code for r
 
 Re-Danker
 
-MIPSter SKILENTON is back, baby!
+SPIMster SKILENTON is back, baby!
+
+### Flag
+
+MCA{1193021963}

@@ -55,6 +55,10 @@ w00t:
 	li $v0, 1
 	syscall
 
+	la	$a0, meme_end
+	li	$v0, 4
+	syscall
+
 	la	$a0, new_meme
 	li	$v0, 4
 	syscall
@@ -85,7 +89,7 @@ bif:
 
 	lw 	$a0, leet_meme # leet_meme is 13371337
 	move 	$t2, $a0 # t2 is now 13371337
-	div $v0, $t2 
+	div $v0, $t2
 	mfhi $v0 # v0 is now v0 % t2 from previous line
 
 	add $v0, $v0, $s1 # final value is return value from n-2 recursion of fibonacci % 13371337 + value from n-1 recursion of fibonacci
@@ -111,7 +115,8 @@ rekt:
 
 	.data
 meme_in:		.asciiz "Run progr4m run! MAUAHAHAHA..."
-meme_out: 		.asciiz "Nice Meme: MCA-"
+meme_out:		.asciiz "Nice Meme: MCA{"
+meme_end:		.asciiz "}"
 meme_num:		.word 200
 leet_meme:	.word 13371337
 new_meme:		.asciiz "\n"
